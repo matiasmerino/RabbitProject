@@ -120,12 +120,16 @@
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSelectFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>40, 12</value>
   </data>
   <data name="btnSelectFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 23</value>
+    <value>225, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSelectFile.TabIndex" type="System.Int32, mscorlib">
@@ -147,7 +151,7 @@
     <value>9</value>
   </data>
   <data name="txtFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
+    <value>40, 39</value>
   </data>
   <data name="txtFileName.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 20</value>
@@ -155,7 +159,6 @@
   <data name="txtFileName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtFileName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
@@ -171,8 +174,24 @@
   <data name="&gt;&gt;txtFileName.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="btnEncriptar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAbZJREFUOE+Nkd0rg2EYxt+SREiklYVwJqcO5MTBahIHMnHkcKX8Ayghn9mbA7Wk
+        yWdrW2uJaWFMCfM9B2qRg6F2xDgwlL2X936827vvdtevPbvv67qe5964+AoGv+FyXcFs3sX29gnDYtln
+        PZpJsuQVCHxhackOj+cBVKHQTwTq0Yw0kjyxDIYNPD4+MwPdrNdbGCaTHW9vr/B6fSCNJI8tMtINZKbn
+        01kacfSd5xdZSPgSaSQX7Uj4/X6MjRsSnko9t9vNXnZ6fJkYQE0KoF2nppcTBNTbcR6mDri/2GPPPnK5
+        sD47wgS/wQAIOq/ohrBps7EVvG5HbIDPMYqb+RZ4VlpxZ2zD+bwKz7Zu+KydDDpTj+bE9YIa5JHsHOcc
+        rhX/NC1CHw0ZIbw3wTlQLQes9lVB+KyH8CJ+ZsJWAVZ7SuWAma4KCE91EG7L03OmhLCWB2EuF3yrUg7o
+        bxYDSLCvSI21iBnDDDaVyAGD6jIIB2IIiaIxFv5jkIx8ToT0AfHGsHkiO0JMAFuBAmz5/9CeZA4H6LJk
+        BjhGf2OxHKDr1WBSUwO+ozI54g8WzaRKAZ22XQzguD9k1yKrQbml0wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnEncriptar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomRight</value>
+  </data>
   <data name="btnEncriptar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 156</value>
+    <value>40, 156</value>
   </data>
   <data name="btnEncriptar.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -198,17 +217,20 @@
   <data name="lblKey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblKey.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
   <data name="lblKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 64</value>
+    <value>133, 62</value>
   </data>
   <data name="lblKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
+    <value>39, 13</value>
   </data>
   <data name="lblKey.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="lblKey.Text" xml:space="preserve">
-    <value>Key</value>
+    <value>Clave</value>
   </data>
   <data name="&gt;&gt;lblKey.Name" xml:space="preserve">
     <value>lblKey</value>
@@ -226,7 +248,10 @@
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="txtKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 80</value>
+    <value>40, 78</value>
+  </data>
+  <data name="txtKey.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="txtKey.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 24</value>
@@ -252,17 +277,20 @@
   <data name="lblVector.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblVector.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
   <data name="lblVector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 107</value>
+    <value>105, 105</value>
   </data>
   <data name="lblVector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
+    <value>104, 13</value>
   </data>
   <data name="lblVector.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="lblVector.Text" xml:space="preserve">
-    <value>Vector</value>
+    <value>Vector (opcional)</value>
   </data>
   <data name="&gt;&gt;lblVector.Name" xml:space="preserve">
     <value>lblVector</value>
@@ -280,7 +308,10 @@
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="txtVector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 123</value>
+    <value>40, 121</value>
+  </data>
+  <data name="txtVector.MaxLength" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="txtVector.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 24</value>
@@ -319,7 +350,7 @@
 </value>
   </data>
   <data name="btnRandomKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 79</value>
+    <value>271, 78</value>
   </data>
   <data name="btnRandomKey.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -358,7 +389,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnRandomV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 122</value>
+    <value>271, 121</value>
   </data>
   <data name="btnRandomV.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -379,7 +410,7 @@
     <value>1</value>
   </data>
   <data name="btnDesencriptar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 156</value>
+    <value>165, 156</value>
   </data>
   <data name="btnDesencriptar.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -412,7 +443,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>280, 191</value>
+    <value>304, 191</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1547,10 +1578,10 @@
 </value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>296, 230</value>
+    <value>320, 230</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>296, 230</value>
+    <value>320, 230</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -33,7 +33,7 @@ namespace Crypto.Rabbit
         static UInt64 ArrayToUInt64(byte[] b)
         {
             if (b.Length != 8)
-                throw new ArgumentException("IV length must be 8 bytes");
+                throw new ArgumentException("El vector debe tener 8 caracteres");
 
             UInt64 val = 0;
             for (int j = 0; j < b.Length; j++)
@@ -46,9 +46,9 @@ namespace Crypto.Rabbit
         public static RabbitCipher Create(byte[] key, byte[] IV)
         {
             if (key.Length != 16)
-                throw new ArgumentException("Keylength must be 16 bytes", "key");
+                throw new ArgumentException("La clave debe tener 16 caracteres");
             if (IV.Length != 8)
-                throw new ArgumentException("IV length must be 8 bytes", "IV");
+                throw new ArgumentException("El vector debe tener 8 caracteres");
 
             return new RabbitCipher(key, ArrayToUInt64(IV));
         }
@@ -70,7 +70,7 @@ namespace Crypto.Rabbit
         public RabbitCipher(byte[] key, UInt64? IV = null)
         {
             if (key.Length != 16)
-                throw new ArgumentException("Keylength must be 16 bytes", "key");
+                throw new ArgumentException("La clave debe tener 16 caracteres");
 
             Array.Copy(key, Key, 16);
 
