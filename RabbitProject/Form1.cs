@@ -59,6 +59,7 @@ namespace RabbitProject
                     if (r <= 0) break;
                     cs.Write(buffer, 0, r);
                 }
+                cs.Dispose();
                 outfs.Dispose();
                 byte[] encryptedArray = File.ReadAllBytes(targetFileName);
                 byte[] exportArray = new byte[headerArray.Length + encryptedArray.Length];
@@ -72,7 +73,8 @@ namespace RabbitProject
                 m2s.Dispose();
                 bitmapMS.Dispose();
                 newImage.Dispose();
-                MessageBox.Show(((Button)sender).Text.Replace("ar","ado") + " correctamente.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                openFileDialog.Dispose();
+                MessageBox.Show(((Button)sender).Tag + "correctamente.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -82,18 +84,20 @@ namespace RabbitProject
 
         private void btnRandomKey_Click(object sender, EventArgs e)
         {
-            byte[] bytes = new byte[16];
-            var rng = new RNGCryptoServiceProvider();
-            rng.GetBytes(bytes);
-            txtKey.Text = Convert.ToBase64String(bytes).Substring(0, bytes.Length);
+            txtKey.Text = GenerarClave(16);
         }
 
         private void btnRandomV_Click(object sender, EventArgs e)
         {
-            byte[] bytes = new byte[8];
+            txtVector.Text = GenerarClave(8);
+        }
+
+        private string GenerarClave(int size)
+        {
+            byte[] bytes = new byte[size];
             var rng = new RNGCryptoServiceProvider();
             rng.GetBytes(bytes);
-            txtVector.Text = Convert.ToBase64String(bytes).Substring(0, bytes.Length);
+            return Convert.ToBase64String(bytes).Substring(0, bytes.Length);
         }
     }
 }

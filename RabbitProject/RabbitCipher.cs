@@ -79,6 +79,7 @@ namespace Crypto.Rabbit
                 K[i] = (ushort)((key[15 - 2 * i - 1] << 8) | key[15 - 2 * i]);
             }
 
+            // División de la clave en 8 partes para asignarla a cada estado y contador
             for (int j = 0; j < 8; j++)
             {
                 if (j % 2 == 0)
@@ -93,11 +94,13 @@ namespace Crypto.Rabbit
                 }
             }
 
+            // 4 iteraciones
             for (int i = 0; i < 4; i++)
             {
                 Round();
             }
 
+            // Reinicialización de contadores
             for (int j = 0; j < 8; j++)
             {
                 C[j] = C[j] ^ X[(j + 4) % 8];
@@ -123,16 +126,19 @@ namespace Crypto.Rabbit
             }
         }
 
+        /// <summary>
+        /// Función donde se actualiza el contador y el siguiente estado
+        /// </summary>
         public void Round()
         {
             for (int j = 0; j < 8; j++)
             {
-                // Counter update
+                // Actualiza contadores
                 UInt64 temp = C[j] + A[j] + CarryBit;
                 CarryBit = (temp / WORDSIZE);
                 C[j] = (temp % WORDSIZE);
 
-                // Next state
+                // Actualiza funcion siguiente estado
                 UInt64 t = ((UInt64)X[j] + C[j]) % WORDSIZE;
                 UInt64 w = t * t;
                 UInt32 lsw = (UInt32)(w & 0xFFFFFFFF);
@@ -140,6 +146,7 @@ namespace Crypto.Rabbit
                 G[j] = lsw ^ msw;
             }
 
+            // Actualización de estados
             X[0] = (UInt32)((G[0] + G[7].Rol(16) + G[6].Rol(16)) % WORDSIZE);
             X[1] = (UInt32)((G[1] + G[0].Rol(8) + G[7]) % WORDSIZE);
             X[2] = (UInt32)((G[2] + G[1].Rol(16) + G[0].Rol(16)) % WORDSIZE);

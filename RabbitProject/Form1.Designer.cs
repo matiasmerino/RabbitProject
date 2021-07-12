@@ -65,7 +65,7 @@ namespace RabbitProject
             // 
             resources.ApplyResources(this.btnEncriptar, "btnEncriptar");
             this.btnEncriptar.Name = "btnEncriptar";
-            this.btnEncriptar.Tag = "Encripted_";
+            this.btnEncriptar.Tag = "Encriptado ";
             this.btnEncriptar.UseVisualStyleBackColor = true;
             this.btnEncriptar.Click += new System.EventHandler(this.btnEncriptarDesencriptar_Click);
             // 
@@ -107,7 +107,7 @@ namespace RabbitProject
             // 
             resources.ApplyResources(this.btnDesencriptar, "btnDesencriptar");
             this.btnDesencriptar.Name = "btnDesencriptar";
-            this.btnDesencriptar.Tag = "Decripted_";
+            this.btnDesencriptar.Tag = "Desencriptado ";
             this.btnDesencriptar.UseVisualStyleBackColor = true;
             this.btnDesencriptar.Click += new System.EventHandler(this.btnEncriptarDesencriptar_Click);
             // 
