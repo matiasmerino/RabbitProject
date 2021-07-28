@@ -24,11 +24,8 @@ namespace RabbitProject
 
         private void btnSelectFile_Click(object sender, EventArgs e)
         {
-            openFileDialog.Title = "Buscar archivo";
-            openFileDialog.Filter = "Image Files (*.bmp)|*.bmp";
-            openFileDialog.AddExtension = true;
+            txtFileName.Text = "";
             openFileDialog.FileName = "";
-            openFileDialog.InitialDirectory = Environment.CurrentDirectory;
             openFileDialog.ShowDialog();
         }
 
@@ -98,6 +95,29 @@ namespace RabbitProject
             var rng = new RNGCryptoServiceProvider();
             rng.GetBytes(bytes);
             return Convert.ToBase64String(bytes).Substring(0, bytes.Length);
+        }
+
+        private void Form1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] a = (string[])e.Data.GetData(DataFormats.FileDrop, true);
+            string extension = Path.GetExtension(a[0]).ToLower();
+            if (extension != ".bmp")
+            {
+                MessageBox.Show("Solo se aceptan archivos con extensión BMP.", "Ups!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                openFileDialog.FileName = a[0];
+                txtFileName.Text = Path.GetFileName(openFileDialog.FileName);
+            }
+        }
+
+        private void Form1_DragEnter(object sender, DragEventArgs e)
+        {
+            if(e.Data.GetDataPresent(DataFormats.FileDrop, false))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
         }
     }
 }

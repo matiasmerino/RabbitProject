@@ -47,6 +47,11 @@ namespace RabbitProject
             // 
             this.openFileDialog.FileName = "Seleccionar";
             this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
+            this.openFileDialog.Title = "Buscar archivo";
+            this.openFileDialog.Filter = "Image Files (*.bmp)|*.bmp";
+            this.openFileDialog.AddExtension = true;
+            this.openFileDialog.InitialDirectory = System.Environment.CurrentDirectory;
+            this.openFileDialog.CheckFileExists = true;
             // 
             // btnSelectFile
             // 
@@ -113,6 +118,7 @@ namespace RabbitProject
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnDesencriptar);
@@ -127,6 +133,8 @@ namespace RabbitProject
             this.Controls.Add(this.btnSelectFile);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 

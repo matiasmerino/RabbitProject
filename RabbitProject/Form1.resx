@@ -136,7 +136,7 @@
     <value>1</value>
   </data>
   <data name="btnSelectFile.Text" xml:space="preserve">
-    <value>Seleccionar archivo...</value>
+    <value>Seleccionar o arrastrar archivo aquí</value>
   </data>
   <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
     <value>btnSelectFile</value>
